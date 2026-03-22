@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CALCULATOR</title>
+    <style>
+        #cal-body{
+    border:solid rgba(126, 120, 120, 0.477);
+    border-radius: 20px;
+    width:280px;
+    background-color: rgb(64, 61, 61);
+    
+}
+#cal-disp{
+    border: solid black;
+    width: 220px;
+    margin: 23px;
+    height: 70px;
+    font-size: 25px;
+    border-radius: 13px;
+    font:bold;
+}
+.cal-but{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.but{
+    border-radius: 30px;
+    width: 70px;
+    height: 50px;
+    margin: 7px;
+    font-size: 30px;
+    background-color: rgba(141, 131, 131, 0.666);
+    font:bold;
+    color: white;
+}
+body{
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <div id="cal-body">
+        <input type="text" id="cal-disp">
+        <div class="cal-but">
+            <button class="but" style="background-color: black;" onclick="
+                val='';
+                document.querySelector('#cal-disp').value = val;
+            ">AC</button>
+            <button class="but" onclick="
+                val += '1';
+                document.querySelector('#cal-disp').value = val;
+            ">1</button>
+            <button class="but" onclick="
+                val+='2';
+                document.querySelector('#cal-disp').value = val;
+            ">2</button>
+            <button class="but" style="background-color:rgb(227, 149, 5);" onclick="
+                val+='+';
+                document.querySelector('#cal-disp').value = val;
+            ">+</button>
+            <button class="but" onclick="
+                val+='3';
+                document.querySelector('#cal-disp').value = val;
+            ">3</button>
+            <button class="but" onclick="
+                val+='4';
+                document.querySelector('#cal-disp').value = val;
+            ">4</button>
+            <button class="but"style="background-color:rgb(227, 149, 5);" onclick="
+                val+='-';
+                document.querySelector('#cal-disp').value = val;
+            ">-</button>
+            <button class="but" onclick="
+                val+='5';
+                document.querySelector('#cal-disp').value = val;
+            ">5</button>
+            <button class="but" onclick="
+                val+='6';
+                document.querySelector('#cal-disp').value = val;
+            ">6</button>
+            <button class="but"style="background-color:rgb(227, 149, 5);" onclick="
+                val+='*';
+                document.querySelector('#cal-disp').value = val;
+            ">*</button>
+            <button class="but" onclick="
+                val+='7';
+                document.querySelector('#cal-disp').value = val;
+            ">7</button>
+            <button class="but" onclick="
+                val+='8';
+                document.querySelector('#cal-disp').value = val;
+            ">8</button>
+            <button class="but"style="background-color:rgb(227, 149, 5);" onclick="
+                val+='/';
+                document.querySelector('#cal-disp').value = val;
+            ">/</button>
+            <button class="but" onclick="
+                val+='9';
+                document.querySelector('#cal-disp').value = val;
+            ">9</button>
+            <button class="but" onclick="
+                val+='0';
+                document.querySelector('#cal-disp').value = val;
+            ">0</button>
+            <button class="but" onclick="
+                val+='.';
+                document.querySelector('#cal-disp').value = val;
+            ">.</button>
+            <h3>calculator</h6>
+            <button class="but" style="background-color:rgb(227, 149, 5) ;margin-left: 10px;"onclick="
+                val = eval(val);
+                document.querySelector('#cal-disp').value = val;
+            ">=</button>
+           
+        </div>
+    </div>
+    <script>
+        let val='';
+document.querySelector('#cal-disp').value = val;
+    </script>
+</body>
+</html>
